@@ -28,7 +28,7 @@ export class CourseCardComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    console.log('Kraj jedne componente');
+    // console.log('Kraj jedne componente');
     this.titleClicked.unsubscribe();
   }
 

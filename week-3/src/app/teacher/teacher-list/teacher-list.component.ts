@@ -34,4 +34,8 @@ export class TeacherListComponent implements OnInit {
     this.dataSource = new MatTableDataSource(teachers);
   }
 
+  addButtonClicked(event) {
+    console.log('Button clicked on ', event);
+  }
+
 }

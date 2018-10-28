@@ -24,12 +24,18 @@ export class CourseListComponent implements OnInit {
   ngOnInit() {
     this.loadCourses();
   }
+
   private async loadCourses() {
     this.courses = await this.courseService.getAllCourses();
     this.setDataSource(this.courses);
   }
+
   private setDataSource(courses: CourseModel[]) {
     this.dataSource = new MatTableDataSource(courses);
+  }
+
+  addButtonClicked(event) {
+    console.log('Button clicked on ', event);
   }
 
 }

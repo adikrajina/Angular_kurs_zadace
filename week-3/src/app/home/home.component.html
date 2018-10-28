@@ -1,7 +1,7 @@
 <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
     <cm-course-card  fxFlex="100%"
-                     *ngFor="let c of courses" 
-                     [course]="c"
+                     *ngFor="let course of courses" 
+                     [course]="course"
                      (titleClicked)="courseTitleSelected($event)"
                      ></cm-course-card>
 </div>

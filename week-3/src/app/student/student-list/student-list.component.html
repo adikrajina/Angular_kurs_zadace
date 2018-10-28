@@ -1,4 +1,7 @@
-<h1 class="mat-h1">Students</h1>
+<cm-header class="mat-h1"
+           [headerText]="'Students'"
+           (buttonClicked)="addButtonClicked($event)"
+          ></cm-header>
 <table mat-table [dataSource]="dataSource" matSort>
   <!-- ID Column -->
   <ng-container matColumnDef="id">
