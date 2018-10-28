@@ -2,7 +2,6 @@
 
 Opis kursa
 
-Opis kursa:
 Kurs je namijenjen početnicima kao i developerima koji žele da nauče Angular. Poznavanje AngularJS-a (Angular 1) nije neophodno. Kurs  počinje od same postavke aplikacije, zatim se prolazi kroz osnove Angulara, te se uči kako raditi sa komponentama, servisima, rauting-om, formama i još mnogo toga. Polaznici će u toku kursa razvijati web aplikaciju, tako da će stečeno znanje odmah primjenjivati i u praksi.
 
 Očekivanja i ciljevi:
@@ -21,7 +20,7 @@ Detalji:
 
 https://www.academy387.com/program/angular-v2
 
-Zadace:
+Zadace
 
 Prva zadaca 17.10.2018 (rok 22.10.2018):
 
