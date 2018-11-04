@@ -1,0 +1,9 @@
+<mat-grid-list cols="2" rowHeight="200px">
+  <mat-grid-tile class= "teacher-card" *ngFor="let teacher of teachers">
+    <mat-card>
+      <mat-card-title> {{teacher.name}} </mat-card-title>
+      <mat-card-subtitle>Rating {{teacher.rating}}</mat-card-subtitle>    
+      <mat-card-subtitle>{{teacher.about}}</mat-card-subtitle>       
+    </mat-card> 
+  </mat-grid-tile>
+</mat-grid-list>
