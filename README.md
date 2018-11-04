@@ -22,19 +22,19 @@ https://www.academy387.com/program/angular-v2
 
 Zadace
 
-Prva zadaca 17.10.2018 (rok 22.10.2018):
+Prva zadaca 17.10.2018 (rok 22.10.2018), folder week2:
 
 napraviti studente i teachers
 mock -ovati podatke
 
-Druga zadaca 24.10.2018 (rok 28.10.2018):
+Druga zadaca 24.10.2018 (rok 28.10.2018), folder week3:
 
 napraviti shared folder
 napraviti header componenet koji ce biti u shared folder
 import ce biti header ostalih komponeneti (cours, student, teacher).
 na desnoj strani dodati Add button koji ce biti dio header componente koji ce imati output vrijednost addbuttoncliced i da se ostale komponenete (cours, student, teacher) pretplate na to. klikom na button treba ispisati koja je komponeneta otvorena
 
-Treca zadaca 31.10.2018 (rok 05.11.2018)
+Treca zadaca 31.10.2018 (rok 05.11.2018), folder week4
 1. napraviti modal za add i edit studenata i teachera
 2. napraviti drugi dialog za studente i teachere koji ce se zvati confirm dialog "da li zelite da obrisete student.name ili teacher.name" i to vezati za delete button. Dialoj treba da ima Yes i NO. Yes ispisje alert "uspjesno obrisan student.name& teacher.name. No zatvara prozor.
 Za advanced polaznike u shared folderu napraviti confirm modal dialog koji ce se pozvati na teacher i student.
