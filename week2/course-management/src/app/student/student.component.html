@@ -1,0 +1,6 @@
+<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+  <mat-card class= "student-card" *ngFor="let student of students">
+      <mat-card-title> {{student.name}} </mat-card-title>
+      <mat-card-subtitle>{{student.course}}</mat-card-subtitle>   
+  </mat-card>
+</div>
