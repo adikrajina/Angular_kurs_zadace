@@ -35,9 +35,9 @@ export class StudentModalDialogComponent implements OnInit {
   private createStudentForm() {
     this.studentForm = new FormGroup({
       first_name: new FormControl(this.student.first_name, Validators.required),
-      last_name: new FormControl(this.student.last_name),
+      last_name: new FormControl(this.student.last_name, Validators.required),
       full_name: new FormControl(this.student.full_name),
-      email: new FormControl(this.student.email)
+      email: new FormControl(this.student.email, Validators.required)
     });
 
   }
