@@ -23,6 +23,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { CourseDetailComponent } from './course/course-detail/course-detail.component';
 import { CourseModalDialogComponent } from './course/course-modal-dialog/course-modal-dialog.component';
 import { StudentModalDialogComponent } from './student/student-modal-dialog/student-modal-dialog.component';
+import { TeacherModalDialogComponent } from './teacher/teacher-modal-dialog/teacher-modal-dialog.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { StudentModalDialogComponent } from './student/student-modal-dialog/stud
     HeaderComponent,
     CourseDetailComponent,
     CourseModalDialogComponent,
-    StudentModalDialogComponent
+    StudentModalDialogComponent,
+    TeacherModalDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +64,8 @@ import { StudentModalDialogComponent } from './student/student-modal-dialog/stud
   ],
   entryComponents: [
     CourseModalDialogComponent,
-    StudentModalDialogComponent
+    StudentModalDialogComponent,
+    TeacherModalDialogComponent
   ],
   bootstrap: [AppComponent]
 })

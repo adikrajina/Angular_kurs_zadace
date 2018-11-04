@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material';
+import { MatTableDataSource, MatDialog } from '@angular/material';
 import { TeacherService } from '../core/teacher.service';
 import { TeacherModel } from '../core/teacher.model';
+import { AlertService } from 'src/app/shared/alert/alert.service';
+import { TeacherModalDialogComponent } from '../teacher-modal-dialog/teacher-modal-dialog.component';
 
 @Component({
   selector: 'cm-teacher-list',
@@ -19,11 +21,34 @@ export class TeacherListComponent implements OnInit {
   // END DATA TABLE CONFIG
 
   constructor(
-    private teacherService: TeacherService
+    private teacherService: TeacherService,
+    private alert: AlertService,
+    private dialog: MatDialog
   ) { }
 
   ngOnInit() {
     this.loadTeachers();
+  }
+
+  addNewTeacher() {
+    this.dialog.open(TeacherModalDialogComponent)
+                .afterClosed()
+                .subscribe(result => {console.log('The dialog was closed');
+              });
+  }
+
+  updateTeacher(teacher: TeacherModel) {
+    this.dialog.open(TeacherModalDialogComponent, {
+          hasBackdrop: false,
+          data: {teacher}// u modernom JS, inace moza i ovako data: {teacher: teacher}
+        })
+      .afterClosed()
+      .subscribe(result => {console.log('The dialog was closed');
+    });
+  }
+
+  deleteTeacher(teacher: TeacherModel) {
+    this.alert.error('Teacher ' + teacher.full_name + ' deleted ');
   }
 
   private async loadTeachers() {
