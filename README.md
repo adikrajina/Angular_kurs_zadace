@@ -44,3 +44,4 @@ Cetvrta zadaca 07.11.2018 (rok 12.11.2018), folder week5-2
 1. Napraviti get student, get student by id, update student, delete student. Isto i za teacher (update nije radjeno na casu).
 2. Baza ima puno vise polja za student i teacher (ima i course ali to ne treba raditi za zadacu). Add i update Studenata i Teache, forma i model moraju biti prosireni da prikazu podatke. Spojiti first nama i last name i obratiti paznju da se na formi prikaze full name.
 Bitno jeda forma ima validaciju. Ne moze se student kreirati bez first_name, last_name i email. Ne moze se kreirati teacher bez first_name, last_name i phone_number.
+OPCIONO: u tabeli sa podacima prikazati redne brojeve (umjesto ID koji je sada prikazan i ima praznina).
