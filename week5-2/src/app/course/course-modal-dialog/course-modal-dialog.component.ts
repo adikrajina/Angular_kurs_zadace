@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CourseModel } from '../core/course.model';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { CourseService } from '../core/course.service';
 
 @Component({
   selector: 'cm-course-modal-dialog',
@@ -16,6 +17,7 @@ export class CourseModalDialogComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<CourseModalDialogComponent>,
+    private courseService: CourseService,
     @Inject(MAT_DIALOG_DATA) public data
   ) {
     this.course = (this.data && this.data.course) ? this.data.course : new CourseModel();
@@ -24,6 +26,20 @@ export class CourseModalDialogComponent implements OnInit {
   ngOnInit() {
     this.createCourseForm();
     this.title = this.course.id ? 'Edit Course' : 'Add New Course';
+  }
+
+  submit() {
+    // iako ima disabled dugme, to je front end koji je hakable
+    if (this.courseForm.invalid) {
+      return;
+    }
+    this.courseService.createCourse(this.courseForm.value).subscribe(
+        response => {
+          console.log(response);
+          if (response) {
+            this.dialogRef.close({success: true});
+          }
+        });
   }
 
   private createCourseForm() {

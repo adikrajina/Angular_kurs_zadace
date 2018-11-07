@@ -15,7 +15,12 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.courses = this.courseService.getAllCourses();
+    // this.courses = this.courseService.getAllCourses();
+    this.courseService.getAllCourses().subscribe(
+      response => {
+        this.courses = response;
+        console.log(this.courses);
+      });
   }
 
   courseTitleSelected(x) {

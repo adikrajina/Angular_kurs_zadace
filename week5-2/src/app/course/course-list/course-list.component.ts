@@ -35,7 +35,14 @@ export class CourseListComponent implements OnInit {
   addNewCourse() {
     this.dialog.open(CourseModalDialogComponent)
       .afterClosed()
-      .subscribe(result => console.log(result));
+      .subscribe(
+          result => {
+            console.log(result);
+            if (result && result.success) {
+              this.alert.success('Added new course');
+            }
+            this.loadCourses();
+          });
     // this.alert.success('Add new Course selected');
   }
 
@@ -53,14 +60,26 @@ export class CourseListComponent implements OnInit {
       .afterClosed()
       .subscribe(result => {
         if (result && result.confirm) {
-          this.alert.warning(`Delete ${course.name}`);
+          this.courseService.deleteCourse(course.id)
+            .subscribe(() => {
+              this.alert.info(`Delete ${course.name}`);
+              this.loadCourses();
+            }
+            );
         }
       });
   }
 
   private async loadCourses() {
-    this.courses = await this.courseService.getAllCourses();
-    this.setDataSource(this.courses);
+    // this.courses = await this.courseService.getAllCourses();
+    this.courseService.getAllCourses().subscribe(
+      response => {
+        this.courses = response;
+        console.log(this.courses);
+        this.setDataSource(this.courses);
+      },
+      err => this.alert.error('Unexpected server error')
+    );
   }
 
   private setDataSource(courses: CourseModel[]) {
