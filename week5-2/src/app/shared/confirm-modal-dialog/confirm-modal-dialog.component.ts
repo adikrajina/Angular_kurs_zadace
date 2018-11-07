@@ -7,13 +7,14 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
   styleUrls: ['./confirm-modal-dialog.component.css']
 })
 export class ConfirmModalDialogComponent implements OnInit {
-  confirmText = 'Are you shure?';
+
+  confirmText = 'Are you sure?';
 
   constructor(
     private dialogRef: MatDialogRef<ConfirmModalDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data
   ) {
-    console.log(this.data);
+    console.log('Dialog constructor', this.data);
     if (this.data && this.data.confirmText) {
       this.confirmText = this.data.confirmText;
     }

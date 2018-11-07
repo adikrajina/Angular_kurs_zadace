@@ -47,7 +47,9 @@ export class StudentListComponent implements OnInit {
 
   deleteStudent(student: StudentModel) {
     this.dialog.open(ConfirmModalDialogComponent, {
-      data: {confirmText: 'Da li ste sigurni?'}
+      data: {
+        confirmText: 'Neki text za naslov'
+      }
     })
       .afterClosed()
       .subscribe(result => {

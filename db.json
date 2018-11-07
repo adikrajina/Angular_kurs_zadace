@@ -1,0 +1,260 @@
+{
+  "courses": [
+    {
+      "id": 2,
+      "name": "English Course",
+      "location": "Sarajevo",
+      "description": "Awesome course",
+      "address": "",
+      "state": "",
+      "start_date": "2018-04-03T21:43:13.000Z",
+      "end_date": "2018-04-20T21:43:13.000Z",
+      "teacher": 1
+    },
+    {
+      "id": 3,
+      "name": "AngularJS Course",
+      "location": "Sarajevo",
+      "description": "Test description. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "address": "",
+      "state": "",
+      "start_date": "2018-04-03T18:47:42.000Z",
+      "end_date": "2018-04-20T18:47:42.000Z",
+      "teacher": 2
+    },
+    {
+      "id": 4,
+      "name": "Russian Course",
+      "description": "",
+      "address": "",
+      "state": "",
+      "location": "Zagreb",
+      "start_date": "2018-04-03T21:43:13.000Z",
+      "end_date": "2018-04-20T21:43:13.000Z"
+    },
+    {
+      "id": 5,
+      "name": "PHP Course",
+      "description": "",
+      "address": "",
+      "state": "",
+      "location": "Beograd",
+      "start_date": "2018-04-03T21:43:13.000Z",
+      "end_date": "2018-04-20T21:43:13.000Z"
+    },
+    {
+      "id": 6,
+      "name": "C# Course",
+      "description": "",
+      "address": "",
+      "state": "",
+      "location": "Sarajevo",
+      "start_date": "2018-04-03T21:43:13.000Z",
+      "end_date": "2018-04-20T21:43:13.000Z"
+    },
+    {
+      "id": 7,
+      "name": "Python Course",
+      "description": "",
+      "address": "",
+      "state": "",
+      "location": "Tuzla",
+      "start_date": "2018-04-03T21:43:13.000Z",
+      "end_date": "2018-04-20T21:43:13.000Z"
+    },
+    {
+      "id": 8,
+      "name": "French Course",
+      "location": "Las Vegas",
+      "description": "This is awesome course in Las Vegas !!!",
+      "address": "",
+      "state": "",
+      "start_date": "2018-04-03T21:43:13.000Z2018-04-09T22:00:00.000Z",
+      "end_date": "2018-04-24T22:00:00.000Z"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "first_name": "Herta",
+      "last_name": "Riatt",
+      "email": "hriatt0@nature.com",
+      "gender": "Female",
+      "phone_number": "748-867-9240"
+    },
+    {
+      "id": 2,
+      "first_name": "Alec",
+      "last_name": "Greswell",
+      "email": "agreswell1@livejournal.com",
+      "gender": "Male",
+      "phone_number": "386-795-7861"
+    },
+    {
+      "id": 3,
+      "first_name": "Klarika",
+      "last_name": "Jobke",
+      "email": "kjobke2@fda.gov",
+      "gender": "Female",
+      "phone_number": "370-126-1669"
+    },
+    {
+      "id": 4,
+      "first_name": "Sheeree",
+      "last_name": "Proudlock",
+      "email": "sproudlock3@psu.edu",
+      "gender": "Female",
+      "phone_number": "800-877-8769"
+    },
+    {
+      "id": 5,
+      "first_name": "Bordie",
+      "last_name": "Bellringer",
+      "email": "bbellringer4@123-reg.co.uk",
+      "gender": "Male",
+      "phone_number": "110-172-2161"
+    },
+    {
+      "id": 6,
+      "first_name": "Barby",
+      "last_name": "Oxton",
+      "email": "boxton5@godaddy.com",
+      "gender": "Female",
+      "phone_number": "842-864-2284"
+    },
+    {
+      "id": 7,
+      "first_name": "Joyan",
+      "last_name": "Giddens",
+      "email": "jgiddens6@elegantthemes.com",
+      "gender": "Female",
+      "phone_number": "202-753-7352"
+    },
+    {
+      "id": 8,
+      "first_name": "Noe",
+      "last_name": "Kelston",
+      "email": "nkelston7@usgs.gov",
+      "gender": "Male",
+      "phone_number": "477-417-3433"
+    },
+    {
+      "id": 9,
+      "first_name": "Antoni",
+      "last_name": "Vitler",
+      "email": "avitler8@ask.com",
+      "gender": "Male",
+      "phone_number": "693-134-9141"
+    },
+    {
+      "id": 10,
+      "first_name": "Jed",
+      "last_name": "Vincent",
+      "email": "jvincent9@usgs.gov",
+      "gender": "Male",
+      "phone_number": "856-821-7697"
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "first_name": "Cleo",
+      "last_name": "Vany",
+      "email": "cvany0@bing.com",
+      "gender": "Female",
+      "phone_number": "111-954-6148",
+      "website": "flickr.com",
+      "company": "Tagcat"
+    },
+    {
+      "id": 2,
+      "first_name": "Haley",
+      "last_name": "Keems",
+      "email": "hkeems1@ed.gov",
+      "gender": "Female",
+      "phone_number": "772-507-4133",
+      "website": "icio.us",
+      "company": "Dabvine"
+    },
+    {
+      "id": 3,
+      "first_name": "Rolph",
+      "last_name": "Esplin",
+      "email": "resplin2@oakley.com",
+      "gender": "Male",
+      "phone_number": "420-382-7641",
+      "website": "earthlink.net",
+      "company": "Devbug"
+    },
+    {
+      "id": 4,
+      "first_name": "Prissie",
+      "last_name": "M'Quhan",
+      "email": "pmquhan3@pagesperso-orange.fr",
+      "gender": "Female",
+      "phone_number": "733-869-0541",
+      "website": "yale.edu",
+      "company": "DabZ"
+    },
+    {
+      "id": 5,
+      "first_name": "Waverley",
+      "last_name": "Kapelhof",
+      "email": "wkapelhof4@salon.com",
+      "gender": "Male",
+      "phone_number": "546-329-5220",
+      "website": "godaddy.com",
+      "company": "Kwilith"
+    },
+    {
+      "id": 6,
+      "first_name": "Anastassia",
+      "last_name": "Laird-Craig",
+      "email": "alairdcraig5@state.gov",
+      "gender": "Female",
+      "phone_number": "944-455-9912",
+      "website": "dedecms.com",
+      "company": "Jetwire"
+    },
+    {
+      "id": 7,
+      "first_name": "Meara",
+      "last_name": "Lorente",
+      "email": "mlorente6@smugmug.com",
+      "gender": "Female",
+      "phone_number": "879-875-8556",
+      "website": "newsvine.com",
+      "company": "Cogilith"
+    },
+    {
+      "id": 8,
+      "first_name": "Clifford",
+      "last_name": "Masding",
+      "email": "cmasding7@miitbeian.gov.cn",
+      "gender": "Male",
+      "phone_number": "703-172-7463",
+      "website": "usnews.com",
+      "company": "Yabox"
+    },
+    {
+      "id": 9,
+      "first_name": "Bondy",
+      "last_name": "Winridge",
+      "email": "bwinridge8@51.la",
+      "gender": "Male",
+      "phone_number": "694-634-0725",
+      "website": "ibm.com",
+      "company": "Flashpoint"
+    },
+    {
+      "id": 10,
+      "first_name": "Clare",
+      "last_name": "Newcome",
+      "email": "cnewcome9@imageshack.us",
+      "gender": "Female",
+      "phone_number": "829-505-9157",
+      "website": "yandex.ru",
+      "company": "Feednation"
+    }
+  ]
+}

@@ -20,7 +20,7 @@ const COURSES = [
       location: 'Mostar',
   },
   {
-      id: 4,
+      id: 45,
       name: 'MS Office',
       description: 'Kurs za sve koji zele da nauce da rade sa Microsoft Office-om',
       location: 'Trebinje',
@@ -37,9 +37,10 @@ export class CourseService {
   getAllCourses() {
     return COURSES;
   }
-  getCourseByid(id: number) {
-    return COURSES.find(course => course.id == id)
-    })
+
+  getCourseById(id: number) {
+    // tslint:disable-next-line:triple-equals
+    return COURSES.find(course => course.id == id);
   }
 
 }
