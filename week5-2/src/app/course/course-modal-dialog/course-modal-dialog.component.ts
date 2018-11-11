@@ -33,13 +33,23 @@ export class CourseModalDialogComponent implements OnInit {
     if (this.courseForm.invalid) {
       return;
     }
-    this.courseService.createCourse(this.courseForm.value).subscribe(
+    if (this.course.id) {
+      this.courseService.updateCourse(this.courseForm.value, this.course.id).subscribe(
         response => {
           console.log(response);
           if (response) {
             this.dialogRef.close({success: true});
           }
         });
+    } else {
+      this.courseService.createCourse(this.courseForm.value).subscribe(
+        response => {
+          console.log(response);
+          if (response) {
+            this.dialogRef.close({success: true});
+          }
+        });
+    }
   }
 
   private createCourseForm() {

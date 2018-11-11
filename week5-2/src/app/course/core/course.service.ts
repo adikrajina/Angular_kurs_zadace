@@ -57,4 +57,9 @@ export class CourseService {
   deleteCourse (id: number) {
     return this.http.delete(environment.API_URL +  'courses/' + id);
   }
+
+  updateCourse(course: CourseModel, id: number) {
+    return this.http.put(environment.API_URL + 'courses/' + id, course);
+  }
+
 }

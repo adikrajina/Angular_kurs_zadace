@@ -1,15 +1,10 @@
 {
   "courses": [
     {
-      "id": 2,
-      "name": "English Course",
-      "location": "Sarajevo",
+      "name": "wwwwaaaaa",
       "description": "Awesome course",
-      "address": "",
-      "state": "",
-      "start_date": "2018-04-03T21:43:13.000Z",
-      "end_date": "2018-04-20T21:43:13.000Z",
-      "teacher": 1
+      "location": "Sarajevo",
+      "id": 2
     },
     {
       "id": 3,
@@ -77,6 +72,30 @@
       "description": "test",
       "location": "test",
       "id": 9
+    },
+    {
+      "name": "Japan Course",
+      "description": "Awesome course",
+      "location": "Sarajevo",
+      "id": 10
+    },
+    {
+      "name": "xCourse",
+      "description": "Awesome course",
+      "location": "Sarajevo",
+      "id": 11
+    },
+    {
+      "name": "seert",
+      "description": "ertert",
+      "location": "ertert",
+      "id": 12
+    },
+    {
+      "name": "ttttttttt",
+      "description": "ttttttttttt",
+      "location": "tttttttttttttttt",
+      "id": 13
     }
   ],
   "students": [

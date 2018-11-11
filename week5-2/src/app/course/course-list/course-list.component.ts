@@ -51,7 +51,14 @@ export class CourseListComponent implements OnInit {
       data: { course }
     })
       .afterClosed()
-      .subscribe(result => console.log(result));
+      .subscribe(result => {
+                  console.log(result);
+                  if (result && result.success) {
+                    this.alert.success('Course updated');
+                  }
+                  this.loadCourses();
+                }
+      );
     this.alert.info(`Update ${course.name}`);
   }
 
