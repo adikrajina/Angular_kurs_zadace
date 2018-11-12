@@ -1,0 +1,81 @@
+<button mat-icon-button mat-dialog-close class="pull-right">
+  <mat-icon>clear</mat-icon>
+</button>
+
+<h2 mat-dialog-title> {{ title }}</h2>
+
+<form [formGroup]="courseForm">
+  <mat-dialog-content>
+
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+      <div fxFlex="50%">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Course Name" formControlName="name" required>
+          <mat-error *ngIf="courseForm.get('name').hasError('required')">
+            <strong>Required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div fxFlex="50%">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Location" formControlName="location" required>
+          <mat-error *ngIf="courseForm.get('location').hasError('required')">
+            <strong>Required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <mat-form-field class="full-width">
+      <textarea matInput placeholder="Description" formControlName="description"></textarea>
+    </mat-form-field>
+
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+      <div fxFlex="50%">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="State" formControlName="state" required>
+          <mat-error *ngIf="courseForm.get('state').hasError('required')">
+            <strong>Required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div fxFlex="50%">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Address" formControlName="address" required>
+          <mat-error *ngIf="courseForm.get('address').hasError('required')">
+            <strong>Required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+      <div fxFlex="50%">
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Start date" formControlName="start_date" required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="courseForm.get('start_date').hasError('required')">
+            <strong>Required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div fxFlex="50%">
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker2" placeholder="End date" formControlName="end_date" required>
+          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+          <mat-error *ngIf="courseForm.get('end_date').hasError('required')">
+            <strong>Required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+  </mat-dialog-content>
+  <div mat-dialog-actions>
+    <span class="fill-remaining-space"></span>
+    <button mat-raised-button [disabled]="courseForm.invalid" color="primary" (click)="submit()">Submit</button>
+    <button mat-raised-button mat-dialog-close>Cancel</button>
+  </div>
+</form>
