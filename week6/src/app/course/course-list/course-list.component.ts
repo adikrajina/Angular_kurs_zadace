@@ -18,7 +18,7 @@ export class CourseListComponent implements OnInit {
   title = 'Courses';
 
   // DATA TABLE CONFIG
-  displayedColumns: string[] = ['id', 'name', 'location', 'actions'];
+  displayedColumns: string[] = ['id', 'name', 'location', 'startDate', 'endDate', 'actions'];
   dataSource: MatTableDataSource<CourseModel>;
   // END DATA TABLE CONFIG
 

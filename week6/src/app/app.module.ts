@@ -37,6 +37,8 @@ import { CourseModalDialogComponent } from './course/course-modal-dialog/course-
 import { ConfirmModalDialogComponent } from './shared/confirm-modal-dialog/confirm-modal-dialog.component';
 import { StudentModalDialogComponent } from './student/student-modal-dialog/student-modal-dialog.component';
 import { TeacherModalDialogComponent } from './teacher/teacher-modal-dialog/teacher-modal-dialog.component';
+import { TruncatePipe } from './shared/truncate.pipe';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -53,7 +55,9 @@ import { TeacherModalDialogComponent } from './teacher/teacher-modal-dialog/teac
     CourseModalDialogComponent,
     ConfirmModalDialogComponent,
     StudentModalDialogComponent,
-    TeacherModalDialogComponent
+    TeacherModalDialogComponent,
+    TruncatePipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

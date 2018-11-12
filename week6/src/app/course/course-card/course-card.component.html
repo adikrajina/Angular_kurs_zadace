@@ -1,4 +1,5 @@
 <mat-card class="home-card">
   <mat-card-title class="home-card-title" (click)="showCourseInfo(course)">{{course.name}}</mat-card-title>
-  <mat-card-subtitle>{{course.description}}</mat-card-subtitle>
+  <mat-card-subtitle>{{course.description | truncate: 100: true}}</mat-card-subtitle>
+  <!-- <mat-card-subtitle>{{course.description | truncate}}</mat-card-subtitle> -->
 </mat-card>
