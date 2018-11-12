@@ -34,7 +34,15 @@ export class TeacherListComponent implements OnInit {
   addNewTeacher() {
     this.dialog.open(TeacherModalDialogComponent)
       .afterClosed()
-      .subscribe(result => console.log(result));
+      .subscribe(
+          result => {
+            console.log(result);
+            if (result && result.success) {
+              this.alert.success('Added new teacher');
+            }
+            this.loadTeachers();
+          });
+    // this.alert.success('Add new Teacher selected');
   }
 
   updateTeacher(teacher: TeacherModel) {
@@ -42,7 +50,15 @@ export class TeacherListComponent implements OnInit {
       data: { teacher }
     })
       .afterClosed()
-      .subscribe(result => console.log(result));
+      .subscribe(result => {
+                  console.log(result);
+                  if (result && result.success) {
+                    this.alert.success('Teacher updated');
+                  }
+                  this.loadTeachers();
+                }
+      );
+    this.alert.info(`Update ${teacher.first_name} ${teacher.last_name}`);
   }
 
   deleteTeacher(teacher: TeacherModel) {
@@ -50,14 +66,26 @@ export class TeacherListComponent implements OnInit {
       .afterClosed()
       .subscribe(result => {
         if (result && result.confirm) {
-          this.alert.warning(`Delete ${teacher.full_name}`);
+          this.teacherService.deleteTeacher(teacher.id)
+            .subscribe(() => {
+              this.alert.info(`Delete ${teacher.first_name} ${teacher.last_name}`);
+              this.loadTeachers();
+            }
+            );
         }
       });
   }
 
   private async loadTeachers() {
-    this.teachers = await this.teacherService.getAllTeachers();
-    this.setDataSource(this.teachers);
+    // this.teachers = await this.teacherService.getAllTeachers();
+    this.teacherService.getAllTeachers().subscribe(
+      response => {
+        this.teachers = response;
+        console.log(this.teachers);
+        this.setDataSource(this.teachers);
+      },
+      err => this.alert.error('Unexpected server error')
+    );
   }
 
   private setDataSource(teachers) {

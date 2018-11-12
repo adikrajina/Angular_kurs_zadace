@@ -1,44 +1,38 @@
 import { Injectable } from '@angular/core';
-
-const STUDENTS = [
-  {
-    id: 1,
-    first_name: 'Nemanja',
-    last_name: 'Nemanjic',
-    full_name: 'Nemanja Nemanjic',
-    email: 'nemanja@test.biz'
-  },
-  {
-    id: 2,
-    first_name: 'Mehrudin',
-    last_name: 'Memedovic',
-    full_name: 'Mehrudin Memedovic',
-    email: 'mehrudin@test.biz'
-  },
-  {
-    id: 3,
-    first_name: 'Almedin',
-    last_name: 'Almedinovic',
-    full_name: 'Almedin Almedinovic',
-    email: 'almedin@test.biz'
-  },
-  {
-    id: 4,
-    first_name: 'Pero',
-    last_name: 'Peric',
-    full_name: 'Pero Peric',
-    email: 'pero@test.biz'
-  },
-];
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { StudentModel } from './student.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudentService {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
-  getAllStudents() {
-    return STUDENTS;
+
+  getAllStudents(): Observable<any> {
+    // return Students;
+    return this.http.get(environment.API_URL + 'students');
+  }
+
+  getStudentById(id: number): Observable<any> {
+    // return Students.find(student => student.id == id);
+    return this.http.get(environment.API_URL + 'students/' + id);
+  }
+
+  createStudent(student: StudentModel) {
+    return this.http.post(environment.API_URL + 'students', student);
+  }
+
+  deleteStudent (id: number) {
+    return this.http.delete(environment.API_URL +  'students/' + id);
+  }
+
+  updateStudent(student: StudentModel, id: number) {
+    return this.http.put(environment.API_URL + 'students/' + id, student);
   }
 }

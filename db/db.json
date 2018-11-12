@@ -100,20 +100,10 @@
   ],
   "students": [
     {
-      "id": 1,
-      "first_name": "Herta",
-      "last_name": "Riatt",
-      "email": "hriatt0@nature.com",
-      "gender": "Female",
-      "phone_number": "748-867-9240"
-    },
-    {
-      "id": 2,
-      "first_name": "Alec",
+      "first_name": "adi",
       "last_name": "Greswell",
-      "email": "agreswell1@livejournal.com",
-      "gender": "Male",
-      "phone_number": "386-795-7861"
+      "email": "adi1@livejournal.com",
+      "id": 2
     },
     {
       "id": 3,
@@ -181,16 +171,6 @@
     }
   ],
   "teachers": [
-    {
-      "id": 1,
-      "first_name": "Cleo",
-      "last_name": "Vany",
-      "email": "cvany0@bing.com",
-      "gender": "Female",
-      "phone_number": "111-954-6148",
-      "website": "flickr.com",
-      "company": "Tagcat"
-    },
     {
       "id": 2,
       "first_name": "Haley",
@@ -280,6 +260,11 @@
       "phone_number": "829-505-9157",
       "website": "yandex.ru",
       "company": "Feednation"
+    },
+    {
+      "first_name": "yxcy",
+      "last_name": "yxc",
+      "id": 11
     }
   ]
 }

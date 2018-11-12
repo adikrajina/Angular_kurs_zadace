@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { StudentModel } from '../core/student.model';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { StudentService } from '../core/student.service';
 
 @Component({
   selector: 'cm-student-modal-dialog',
@@ -16,6 +17,7 @@ export class StudentModalDialogComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<StudentModalDialogComponent>,
+    private studentService: StudentService,
     @Inject(MAT_DIALOG_DATA) public data
   ) {
     this.student = this.data && this.data.student ? this.data.student : new StudentModel();
@@ -24,6 +26,30 @@ export class StudentModalDialogComponent implements OnInit {
   ngOnInit() {
     this.createStudentForm();
     this.title = this.student.id ? 'Edit Student' : 'Add New Student';
+  }
+
+  submit() {
+    // iako ima disabled dugme, to je front end koji je hakable
+    if (this.studentForm.invalid) {
+      return;
+    }
+    if (this.student.id) {
+      this.studentService.updateStudent(this.studentForm.value, this.student.id).subscribe(
+        response => {
+          console.log(response);
+          if (response) {
+            this.dialogRef.close({success: true});
+          }
+        });
+    } else {
+      this.studentService.createStudent(this.studentForm.value).subscribe(
+        response => {
+          console.log(response);
+          if (response) {
+            this.dialogRef.close({success: true});
+          }
+        });
+    }
   }
 
   createStudentForm() {

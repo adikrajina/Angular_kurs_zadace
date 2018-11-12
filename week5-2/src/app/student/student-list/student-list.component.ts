@@ -34,7 +34,15 @@ export class StudentListComponent implements OnInit {
   addNewStudent() {
     this.dialog.open(StudentModalDialogComponent)
       .afterClosed()
-      .subscribe(result => console.log(result));
+      .subscribe(
+          result => {
+            console.log(result);
+            if (result && result.success) {
+              this.alert.success('Added new student');
+            }
+            this.loadStudents();
+          });
+    // this.alert.success('Add new Student selected');
   }
 
   updateStudent(student: StudentModel) {
@@ -42,26 +50,42 @@ export class StudentListComponent implements OnInit {
       data: { student }
     })
       .afterClosed()
-      .subscribe(result => console.log(result));
+      .subscribe(result => {
+                  console.log(result);
+                  if (result && result.success) {
+                    this.alert.success('Student updated');
+                  }
+                  this.loadStudents();
+                }
+      );
+    this.alert.info(`Update ${student.first_name} ${student.last_name}`);
   }
 
   deleteStudent(student: StudentModel) {
-    this.dialog.open(ConfirmModalDialogComponent, {
-      data: {
-        confirmText: 'Neki text za naslov'
-      }
-    })
+    this.dialog.open(ConfirmModalDialogComponent)
       .afterClosed()
       .subscribe(result => {
         if (result && result.confirm) {
-          this.alert.warning(`Delete ${student.full_name}`);
+          this.studentService.deleteStudent(student.id)
+            .subscribe(() => {
+              this.alert.info(`Delete ${student.first_name} ${student.last_name}`);
+              this.loadStudents();
+            }
+            );
         }
       });
   }
 
   private async loadStudents() {
-    this.students = await this.studentService.getAllStudents();
-    this.setDataSource(this.students);
+    // this.students = await this.studentService.getAllStudents();
+    this.studentService.getAllStudents().subscribe(
+      response => {
+        this.students = response;
+        console.log(this.students);
+        this.setDataSource(this.students);
+      },
+      err => this.alert.error('Unexpected server error')
+    );
   }
 
   private setDataSource(students) {
