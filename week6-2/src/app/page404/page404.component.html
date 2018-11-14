@@ -1,0 +1,16 @@
+<div class="page-404" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title class="card-title-404">Page not found :(</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Maybe the page you are looking for has been removed, or you typed in the wrong URL</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <div fxLayout="row" fxLayoutAlign="space-between">
+        <button mat-raised-button (click)="goBack()" color="primary">Go Back</button>
+        <button mat-raised-button (click)="goToHomepage()">Go To Homepage</button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>

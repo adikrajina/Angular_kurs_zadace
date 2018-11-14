@@ -1,0 +1,10 @@
+.home-card {
+  margin-top: 10px;
+  /* min-height: 150px;
+  min-width: 400px; */
+  /* width:; */
+}
+
+.home-card-title {
+  cursor: pointer;
+}

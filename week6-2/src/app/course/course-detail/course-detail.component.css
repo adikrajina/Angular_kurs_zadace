@@ -1,0 +1,8 @@
+button {
+  margin: 10px;
+}
+
+.home-card-2nd-row {
+  height: 250px;
+  overflow: auto;
+}
